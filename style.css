@@ -10,7 +10,7 @@
 .observer-div {
   position: absolute;
   z-index: 999;
-  height: 100px;
+  height: 10px;
   width: 50px;
 }
 
@@ -542,6 +542,9 @@ svg.dd-arrow {
     background-color: #f7f7f757;
     -webkit-transition: all 0.2s ease-out,background-color 0s;
     transition: all 0.2s ease-out,background-color 0s;
+  }
+  .nv-links-wrapper .nv-link-dditem#products.default-open a.nv-link {
+    color: #2DC8AF;
   }
   .nv-links-wrapper .nv-link-dditem#products.default-open svg.dd-arrow {
     -webkit-transform: translateX(0.5em) rotateZ(-90deg);

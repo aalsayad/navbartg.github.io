@@ -12,7 +12,7 @@
     position: absolute;
     //background-color: red;
     z-index: 999;
-    height: 100px;
+    height: 10px;
     width: 50px;
 }
 
@@ -495,6 +495,10 @@ svg.dd-arrow{
             border-bottom: none;
             background-color: #f7f7f757;
             transition: all 0.2s ease-out,background-color 0s;
+
+            a.nv-link{
+                color:#2DC8AF;
+            }
 
             svg.dd-arrow{
                 transform: translateX(0.5em) rotateZ(-90deg);
