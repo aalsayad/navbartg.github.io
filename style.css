@@ -518,6 +518,14 @@ svg.dd-arrow {
     -ms-grid-rows: 10% 10% 10% 10% 10% auto;
         grid-template-rows: 10% 10% 10% 10% 10% auto;
   }
+  .nv-links-wrapper .item-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .nv-links-wrapper .nv-link-dditem#products {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -599,6 +607,14 @@ svg.dd-arrow {
   }
   .nv-links-wrapper .dd-div .dd-item-1, .nv-links-wrapper .dd-div .dd-item-2, .nv-links-wrapper .dd-div .dd-item-3, .nv-links-wrapper .dd-div .dd-item-4 {
     padding-top: 1em;
+  }
+  .nv-links-wrapper .item-title#column {
+    min-width: 70%;
+    margin-bottom: 0.5em;
+  }
+  .nv-links-wrapper .item-title#column-for-careers {
+    min-width: 70%;
+    margin-bottom: 1em;
   }
   .nv-links-wrapper a.nv-link {
     font-size: 0.8em;

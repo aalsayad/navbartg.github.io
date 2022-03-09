@@ -474,6 +474,12 @@ svg.dd-arrow{
         grid-column-gap: 0;
         grid-template-rows: 10% 10% 10% 10% 10% auto;
 
+        .item-title{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
         .nv-link-dditem#products{
             //background-color: rgba(255, 0, 55, 0.075);
             grid-area: products;
@@ -561,6 +567,19 @@ svg.dd-arrow{
                 //display: block;
                 padding-top: 1em;
             }
+        
+        }
+
+        .item-title#column{
+            min-width: 70%;
+            //background-color: red;
+            margin-bottom: 0.5em;
+        }
+
+        .item-title#column-for-careers{
+            min-width: 70%;
+            margin-bottom: 1em;
+            //background-color: red;
         }
 
         a.nv-link{

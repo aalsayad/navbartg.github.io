@@ -108,15 +108,15 @@ function checkMobileView(){
         mobileView = true;
         console.log('We are now in mobile view');
         nvbar.classList.remove('transparent');
-        ToggleWhiteNav.style.height = "0px"; //Changing Observer Div to stop working when we are in mobile view
-        ToggleWhiteNav.style.transform = "translateY(-100px)";
+        //ToggleWhiteNav.style.height = "0px"; //Changing Observer Div to stop working when we are in mobile view
+        //ToggleWhiteNav.style.transform = "translateY(-100px)";
         
 
     }else{
         mobileView = false;
         console.log('We are now in desktop view');
-        ToggleWhiteNav.style.height = "10px"; //Turning back on the observer div
-        ToggleWhiteNav.style.transform = "translateY(0)";
+        //ToggleWhiteNav.style.height = "10px"; //Turning back on the observer div
+        //ToggleWhiteNav.style.transform = "translateY(0)";
         menuBtn.classList.remove('open');
         nvbarLinksWrapper.classList.remove('open');
         menuOpen = false;
