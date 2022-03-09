@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+//Observer div
+.observer-div{
+    position: absolute;
+    //background-color: red;
+    z-index: 999;
+    height: 5px;
+    width: 50px;
+}
+
+.random{
+    height: 400px;
+    background-color: #232D46;
+}
+
+body{
+    height: 16000px;
+    background-color:#232d4631;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo-div{
+    min-width: 7.5em;
+}
+
+.logo-svg{
+    path{
+        fill: #232D46;
+        stroke: none;
+    }
+}
+
+.nvbar{
+    transition: transform 0.4s ease-in-out;
+    background-color: white;
+    color: #232d46d8;
+    padding: 0 15%;
+    height: 4.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.089);
+
+    svg{
+        opacity: 0.9;
+    }
+}
+
+.nv-links-wrapper{
+    cursor:pointer;
+    display: flex;
+    height:100%;
+    align-items: center;
+}
+
+.nv-link-dditem, .nv-link-item{
+    padding: 0 1em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.2em solid transparent;
+    border-top: 0.2em solid transparent;
+
+    a.nv-link{
+        color: #232D46;
+        display: flex;
+        align-items: center;
+        font-size: 0.85rem;
+        font-weight: 500;
+        height: inherit;
+    }
+}
+
+.nv-link-dditem, .nv-link-item{
+    &:hover{
+        border-bottom: 0.2em solid #2DC8AF;
+        transition: 0.3s ease-out;
+
+        a.nv-link{
+            color: #2DC8AF;
+            transition: 0.1s ease-out;
+        }
+
+        svg.dd-arrow{
+            transform: rotateZ(-180deg);
+            transition: 0.2s ease-out;
+
+            path{
+                fill:#2DC8AF;
+            }
+        }
+    }
+}
+
+.nv-link-dditem:hover > .dd-div{
+    visibility: visible;
+    opacity:1;
+    top:100%;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+svg.dd-arrow{
+    margin-left:10px;
+    width: 10px;
+
+}
+
+
+//Drop Down Divider & Content
+.dd-div{
+    z-index: -1;
+    padding: 4em 15%;
+    position: absolute;
+    visibility: hidden;
+    top:30%; 
+    //top:100%;
+    left:0;
+    width: 100vw;
+    background-color: white;
+    cursor: auto;
+    box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.089);
+    display:grid;
+    grid-template-areas:
+        "description item1 item3"
+        "description item2 item4"
+    ;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-row-gap: 3em;
+    grid-column-gap: 1em;
+
+
+    .dd-description{
+        padding:0.7em;
+        //background-color: rgba(255, 0, 0, 0.418);
+        grid-area: description;
+    }
+
+    .dd-item-1,.dd-item-2,.dd-item-3,.dd-item-4{
+        display: flex;
+        align-items:flex-start;
+        padding:0.7em;
+        
+    }
+
+    .dd-item-1#column,.dd-item-2#column,.dd-item-3#column,.dd-item-4#column,.dd-item-1#column-for-careers{
+        flex-direction: column;
+
+        h3{
+            margin-bottom: 1em;
+        }
+    }
+
+    
+    .dd-item-1{
+        //background-color: rgba(60, 255, 0, 0.075);
+        grid-area: item1;
+    }
+
+
+    .dd-item-2{
+        //background-color: rgba(38, 0, 255, 0.418);
+        grid-area: item2;
+    }
+    .dd-item-3{
+        //background-color: rgba(255, 0, 55, 0.075);
+        grid-area: item3;
+    }
+    .dd-item-4{
+        //background-color: rgba(0, 38, 255, 0.479);
+        grid-area: item4;
+    }
+
+    svg{
+        width: 2.2em;
+    }
+
+    svg.ob-comp{
+        width: 2.8em;
+    }
+
+    svg.tg-consults{
+        width: 2.7em;
+    }
+
+    svg.merchants{
+        width:2.5em;
+    }
+
+    svg.fintech{
+        width: 2.3em;
+
+        path.st0{
+            fill: #2DC8AF;
+        }
+        path.st1{
+            fill: #232d46e8;
+        }
+
+    }
+    
+
+    .icon-holder{
+        min-width: 2.8em;
+        margin-right: 1em;
+
+    }
+    
+    h3{
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    p{
+        font-size: 0.83em;
+        line-height: 1.3em;
+        margin-top: 0.3em;
+        font-weight: 400;
+    }
+
+    a{
+        color: #232d46d8;
+        font-weight: 600;
+        font-size: 0.87em;
+    }
+
+
+    svg.dd-arrow-right{
+        width: 0.65em ;
+        min-width: 0.65em;
+        transform: rotateZ(-90deg);
+        margin-left: 0.75em;
+    }
+
+    .item-title{
+        display: flex;
+        align-items: center;
+
+        &:hover{
+
+            a{
+                color:#2DC8AF
+            }
+            svg{
+                transition: 0.45s ease-out;
+                transform: translateX(5px) rotateZ(-90deg);
+                path{
+                    fill: #2DC8AF;
+                }
+            }
+        }
+
+    }
+
+    .item-title#column{
+        align-items: center;
+
+        a{
+            //margin-left: 0.5em;
+            padding: 0.3em 0;
+            font-size: 0.9em;
+            line-height: 1.3em;
+            font-weight: 500;
+        }
+    }
+
+    .item-title#column-for-careers{
+        padding-bottom: 1em;
+        a{
+            padding: 0.3em 0;
+            font-weight: 500;
+        }
+    }
+    
+
+}
+
+.dd-div#careers-dd-div{
+    grid-row-gap: 0;
+    grid-column-gap:5em;
+    padding-bottom: 1em;
+}
+
+.dd-div#aboutus-dd-div{
+    grid-row-gap: 0.1em;
+    grid-template-columns: 25% 0.4fr 1fr;
+    grid-column-gap:5em;
+    padding-bottom: 2em;
+}
+
+
+//Style for Transparent Nav Bar
+.nvbar.transparent{
+    background-color: transparent;
+    box-shadow: none;
+
+    .menu-btn_burger,.menu-btn_burger::before,.menu-btn_burger::after{
+        background-color: #ffffff;
+    }
+
+    a{
+        color: white;
+    }
+
+    svg{
+        opacity: 1;
+        path{
+            fill:white;
+        }
+    }
+}
+
+//style for navbar to move up
+.nvbar.move-up{
+    transform: translateY(-100px);
+    transition: transform 0.6s ease-in 100ms;
+}
+
+//Burger Menu
+.menu-btn{
+    display: none;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    //background-color: red;
+    width: 3.75em;
+    height: 3.75em;
+    cursor: pointer;
+    transition: all .5s ease-out;
+  }
+  
+  .menu-btn_burger{
+    display: flex;
+    width: 1.5em;
+    height: 0.13em;
+    opacity:1;
+    background:#232D46;
+    border-radius: 5px;
+    transition: transform 0.1s ease-out;
+  }
+  
+  .menu-btn_burger::before, .menu-btn_burger::after{
+    content:'';
+    position: absolute;
+    width: 1.5em;
+    height: 0.13em;
+    background:#232D46;
+    border-radius: 5px;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .menu-btn_burger::before{
+    transform: translateY(-0.45em);
+  }
+  
+  .menu-btn_burger::after{
+    transform: translateY(0.45em);
+  }
+  
+  
+  .menu-btn.open .menu-btn_burger{
+    background: transparent;
+  }
+  
+  .menu-btn.open .menu-btn_burger::before{
+    height: 0.13em;
+    transform: translateY(0);
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn.open .menu-btn_burger::after{
+    height: 0.13em;
+    transform: translateY(0);
+    transform: rotate(45deg);
+  }
+
+
+
+
+//Start of Mobile CSS
+@media screen and (max-width:1000px) {
+
+
+    .nvbar{
+        padding: 0 4em;
+    }
+
+    .menu-btn{
+        display: flex;
+    }
+
+    .nv-link-dditem, .nv-link-item{
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        border-right: 0.3em solid transparent;
+        border-left: 0.3em solid transparent;
+        border-bottom: none;
+        border-top: none;    
+        
+        svg{
+            min-width: 7px;
+        }
+        &:hover{
+            border-left: 0.3em solid #2DC8AF;
+            border-bottom: none;
+            background-color: #f7f7f757;
+            transition: all 0.2s ease-out,background-color 0s;
+
+            svg.dd-arrow{
+                transform: translateX(0.5em) rotateZ(-90deg);
+                transition: 0.2s ease-out;
+    
+                path{
+                    fill:#2DC8AF;
+                }
+            }
+        }
+    }
+
+    .nv-link-dditem:hover > .dd-div{
+        visibility: visible;
+        opacity:1;
+        top:0;
+        transition: all 0.2s ease-in-out;
+        
+    }
+    
+    .nv-links-wrapper.open{
+        max-height: 999px;
+        transition: 0.3s ease-in-out;
+    }
+    
+
+    .nv-links-wrapper{
+        overflow: hidden;
+        max-height: 0;
+        box-shadow: inset 0 3px 5px -3px rgba(0,0,0,0.15);
+        position: absolute;
+        top:100%;
+        width: 100vw;
+        left:0;
+        height: 100vh;
+        display: grid;
+        background-color: white;
+        padding:0;
+        margin:0;
+
+        grid-template-areas:
+        "products dd"
+        "solutions dd"
+        "aboutus dd"
+        "careers dd"
+        "fordevs dd"
+        ". dd"
+        ;
+        grid-template-columns: 30% 1fr;
+        grid-row-gap: 0.2em;
+        grid-column-gap: 0;
+        grid-template-rows: 10% 10% 10% 10% 10% auto;
+
+        .nv-link-dditem#products{
+            //background-color: rgba(255, 0, 55, 0.075);
+            grid-area: products;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+
+        }
+
+        .nv-link-dditem#products.default-open{
+            //background-color: rgba(255, 0, 55, 0.075);
+            grid-area: products;
+            border-left: 0.3em solid #2DC8AF;
+            border-bottom: none;
+            background-color: #f7f7f757;
+            transition: all 0.2s ease-out,background-color 0s;
+
+            svg.dd-arrow{
+                transform: translateX(0.5em) rotateZ(-90deg);
+                transition: 0.2s ease-out;
+    
+                path{
+                    fill:#2DC8AF;
+                }
+            }
+            
+
+        }
+
+        .nv-link-dditem#solutions{
+            //background-color: rgba(255, 238, 0, 0.075);
+            grid-area: solutions;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .nv-link-item#for-devs{
+            //background-color: rgba(0, 174, 255, 0.075);
+            grid-area: fordevs;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            
+        }
+
+        .nv-link-dditem#about-us{
+            //background-color: rgba(0, 255, 0, 0.075);
+            grid-area: aboutus;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+        .nv-link-dditem#careers{
+            //background-color: rgba(9, 255, 0, 0.623);
+            grid-area: careers;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .dd-div#products-dd-div.default-open{
+            //background-color:red;
+            visibility: visible;
+        }
+
+
+        .dd-div{
+
+            .dd-description{
+                padding-top: .5em;
+                display: none;
+            }
+
+            box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.08);
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding:1em 1.5em 1em 1em;
+            top:0%;
+            z-index: 99;
+            grid-area: dd;
+            background-color: #f7f7f757;
+
+            .dd-item-1{
+                margin-top: 0em;
+            }
+
+            .dd-item-1,.dd-item-2,.dd-item-3,.dd-item-4{
+                //display: block;
+                padding-top: 1em;
+            }
+        }
+
+        a.nv-link{
+            font-size: 0.8em;
+            color: #232D46;
+
+        }
+        svg.dd-arrow{
+            transform: rotateZ(-90deg);
+            path{
+                fill:#232D46;
+            }
+        }
+    }
+
+}
