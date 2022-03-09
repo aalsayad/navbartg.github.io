@@ -119,6 +119,7 @@ function checkMobileView(){
         menuBtn.classList.remove('open');
         nvbarLinksWrapper.classList.remove('open');
         menuOpen = false;
+        body.style.overflow='unset';
     };
 }
 checkMobileView();
