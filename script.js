@@ -74,17 +74,13 @@ const productsNvLink = document.getElementById('products')
 function NvScrollingAction(){
     let lastScrollY = window.scrollY;
     window.addEventListener('scroll', ()=>{
-        if(!menuOpen & lastScrollY < window.scrollY){
-            //console.log('Menu is closed and we are scrolling down')
+        if(lastScrollY < window.scrollY && AmIatTop =="False"){
+            //console.log('Scrolling down')
             nvbar.classList.remove('transparent');
             nvbar.classList.add('move-up');
-        } else if(!menuOpen & lastScrollY > window.scrollY){
-            //console.log('Menu is closed and we are scrolling up')
+        } else{
+            //console.log('Scrolling up')
             nvbar.classList.remove('move-up');
-        }else if(menuOpen & lastScrollY < window.scrollY){
-            //console.log('Menu is open and we are scrolling down')
-        }else if(menuOpen & lastScrollY > window.scrollY){
-            //console.log('Menu is open and we are scrolling up')
         }
         lastScrollY = window.scrollY;
     })

@@ -10,7 +10,7 @@
 .observer-div {
   position: absolute;
   z-index: 999;
-  height: 5px;
+  height: 100px;
   width: 50px;
 }
 
