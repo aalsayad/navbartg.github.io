@@ -48,6 +48,7 @@ let menuOpen = false;
 
 menuBtn.addEventListener('click', ()=>{
   if(!menuOpen){
+    nvbar.classList.remove('transparent');
     productsNvLink.classList.add('default-open'); //Activate Products DD Link Wrapper Hover Effect
     productsDdDiv.classList.add('default-open'); //Activate Products DD Div Hovered Effect
     menuBtn.classList.add('open');
