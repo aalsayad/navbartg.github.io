@@ -608,6 +608,15 @@ svg.dd-arrow {
   .nv-links-wrapper .dd-div .dd-item-1, .nv-links-wrapper .dd-div .dd-item-2, .nv-links-wrapper .dd-div .dd-item-3, .nv-links-wrapper .dd-div .dd-item-4 {
     padding-top: 1em;
   }
+  .nv-links-wrapper .item-card {
+    width: 80%;
+  }
+  .nv-links-wrapper .item-card .item-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 80%;
+  }
   .nv-links-wrapper .item-title#column {
     min-width: 70%;
     margin-bottom: 0.5em;

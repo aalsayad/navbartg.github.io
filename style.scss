@@ -570,6 +570,15 @@ svg.dd-arrow{
         
         }
 
+        .item-card{
+                width:80%;
+            .item-title{
+                display: flex;
+                min-width:80%;
+                //background-color: red;
+            }
+        }
+
         .item-title#column{
             min-width: 70%;
             //background-color: red;
@@ -581,6 +590,7 @@ svg.dd-arrow{
             margin-bottom: 1em;
             //background-color: red;
         }
+
 
         a.nv-link{
             font-size: 0.8em;

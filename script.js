@@ -60,6 +60,9 @@ menuBtn.addEventListener('click', ()=>{
     nvbarLinksWrapper.classList.remove('open');
     body.style.overflow = 'unset';//adding back the scrollbar if the menu is closed
     menuOpen = false;
+    if(AmIatTop =="True"){
+        nvbar.classList.add('transparent');
+    }
   }
 });
 
