@@ -4,16 +4,13 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
-.observer-div {
-  position: absolute;
-  z-index: 999;
-  height: 3px;
-  width: 50px;
+a {
+  color: #2dc8af;
 }
 
+/*--------------------*/
 .random {
   height: 400px;
   background-color: #232d46;
@@ -24,21 +21,19 @@ body {
   background-color: #232d4631;
 }
 
-a {
-  text-decoration: none;
+/*--------------------*/
+.navbar-full-container {
+  font-family: "Montserrat", sans-serif;
 }
 
-.logo-div {
-  min-width: 7.5em;
-  max-width: 7.5em;
+.navbar-full-container .observer-div {
+  position: absolute;
+  z-index: 999;
+  height: 3px;
+  width: 50px;
 }
 
-.logo-svg path {
-  fill: #232d46;
-  stroke: none;
-}
-
-.nvbar {
+.navbar-full-container .nvbar {
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
@@ -62,11 +57,25 @@ a {
           box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.089);
 }
 
-.nvbar svg {
+.navbar-full-container .nvbar a {
+  text-decoration: none;
+}
+
+.navbar-full-container .nvbar .logo-div {
+  min-width: 7.5em;
+  max-width: 7.5em;
+}
+
+.navbar-full-container .nvbar .logo-svg path {
+  fill: #232d46;
+  stroke: none;
+}
+
+.navbar-full-container .nvbar svg {
   opacity: 0.9;
 }
 
-.nv-links-wrapper {
+.navbar-full-container .nv-links-wrapper {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,8 +86,8 @@ a {
           align-items: center;
 }
 
-.nv-link-dditem,
-.nv-link-item {
+.navbar-full-container .nv-link-dditem,
+.navbar-full-container .nv-link-item {
   padding: 0 1em;
   height: 100%;
   display: -webkit-box;
@@ -94,8 +103,8 @@ a {
   border-top: 0.2em solid transparent;
 }
 
-.nv-link-dditem a.nv-link,
-.nv-link-item a.nv-link {
+.navbar-full-container .nv-link-dditem a.nv-link,
+.navbar-full-container .nv-link-item a.nv-link {
   color: #232d46;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,34 +117,34 @@ a {
   height: inherit;
 }
 
-.nv-link-dditem:hover,
-.nv-link-item:hover {
+.navbar-full-container .nv-link-dditem:hover,
+.navbar-full-container .nv-link-item:hover {
   border-bottom: 0.2em solid #2dc8af;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
 
-.nv-link-dditem:hover a.nv-link,
-.nv-link-item:hover a.nv-link {
+.navbar-full-container .nv-link-dditem:hover a.nv-link,
+.navbar-full-container .nv-link-item:hover a.nv-link {
   color: #2dc8af;
   -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
 }
 
-.nv-link-dditem:hover svg.dd-arrow,
-.nv-link-item:hover svg.dd-arrow {
+.navbar-full-container .nv-link-dditem:hover svg.dd-arrow,
+.navbar-full-container .nv-link-item:hover svg.dd-arrow {
   -webkit-transform: rotateZ(-180deg);
           transform: rotateZ(-180deg);
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
-.nv-link-dditem:hover svg.dd-arrow path,
-.nv-link-item:hover svg.dd-arrow path {
+.navbar-full-container .nv-link-dditem:hover svg.dd-arrow path,
+.navbar-full-container .nv-link-item:hover svg.dd-arrow path {
   fill: #2dc8af;
 }
 
-.nv-link-dditem:hover > .dd-div {
+.navbar-full-container .nv-link-dditem:hover > .dd-div {
   visibility: visible;
   opacity: 1;
   top: 100%;
@@ -143,12 +152,12 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-svg.dd-arrow {
+.navbar-full-container svg.dd-arrow {
   margin-left: 10px;
   width: 10px;
 }
 
-.dd-div {
+.navbar-full-container .dd-div {
   z-index: -1;
   padding: 4em 15%;
   position: absolute;
@@ -169,7 +178,7 @@ svg.dd-arrow {
   grid-column-gap: 1em;
 }
 
-.dd-div .dd-description {
+.navbar-full-container .dd-div .dd-description {
   padding: 0.7em;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -177,10 +186,10 @@ svg.dd-arrow {
   grid-area: description;
 }
 
-.dd-div .dd-item-1,
-.dd-div .dd-item-2,
-.dd-div .dd-item-3,
-.dd-div .dd-item-4 {
+.navbar-full-container .dd-div .dd-item-1,
+.navbar-full-container .dd-div .dd-item-2,
+.navbar-full-container .dd-div .dd-item-3,
+.navbar-full-container .dd-div .dd-item-4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,103 +199,103 @@ svg.dd-arrow {
   padding: 0.7em;
 }
 
-.dd-div .dd-item-1#column,
-.dd-div .dd-item-2#column,
-.dd-div .dd-item-3#column,
-.dd-div .dd-item-4#column,
-.dd-div .dd-item-1#column-for-devs,
-.dd-div .dd-item-1#column-for-careers {
+.navbar-full-container .dd-div .dd-item-1#column,
+.navbar-full-container .dd-div .dd-item-2#column,
+.navbar-full-container .dd-div .dd-item-3#column,
+.navbar-full-container .dd-div .dd-item-4#column,
+.navbar-full-container .dd-div .dd-item-1#column-for-devs,
+.navbar-full-container .dd-div .dd-item-1#column-for-careers {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.dd-div .dd-item-1#column h3,
-.dd-div .dd-item-2#column h3,
-.dd-div .dd-item-3#column h3,
-.dd-div .dd-item-4#column h3,
-.dd-div .dd-item-1#column-for-devs h3,
-.dd-div .dd-item-1#column-for-careers h3 {
+.navbar-full-container .dd-div .dd-item-1#column h3,
+.navbar-full-container .dd-div .dd-item-2#column h3,
+.navbar-full-container .dd-div .dd-item-3#column h3,
+.navbar-full-container .dd-div .dd-item-4#column h3,
+.navbar-full-container .dd-div .dd-item-1#column-for-devs h3,
+.navbar-full-container .dd-div .dd-item-1#column-for-careers h3 {
   margin-bottom: 1em;
 }
 
-.dd-div .dd-item-1 {
+.navbar-full-container .dd-div .dd-item-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: item1;
 }
 
-.dd-div .dd-item-2 {
+.navbar-full-container .dd-div .dd-item-2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: item2;
 }
 
-.dd-div .dd-item-3 {
+.navbar-full-container .dd-div .dd-item-3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: item3;
 }
 
-.dd-div .dd-item-4 {
+.navbar-full-container .dd-div .dd-item-4 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: item4;
 }
 
-.dd-div svg {
+.navbar-full-container .dd-div svg {
   width: 2.2em;
 }
 
-.dd-div svg.ob-comp {
+.navbar-full-container .dd-div svg.ob-comp {
   width: 2.8em;
 }
 
-.dd-div svg.tg-consults {
+.navbar-full-container .dd-div svg.tg-consults {
   width: 2.7em;
 }
 
-.dd-div svg.merchants {
+.navbar-full-container .dd-div svg.merchants {
   width: 2.5em;
 }
 
-.dd-div svg.fintech {
+.navbar-full-container .dd-div svg.fintech {
   width: 2.3em;
 }
 
-.dd-div svg.fintech path.st0 {
+.navbar-full-container .dd-div svg.fintech path.st0 {
   fill: #2dc8af;
 }
 
-.dd-div svg.fintech path.st1 {
+.navbar-full-container .dd-div svg.fintech path.st1 {
   fill: #232d46e8;
 }
 
-.dd-div .icon-holder {
+.navbar-full-container .dd-div .icon-holder {
   min-width: 2.8em;
   margin-right: 1em;
 }
 
-.dd-div h3 {
+.navbar-full-container .dd-div h3 {
   font-weight: 600;
   font-size: 1em;
 }
 
-.dd-div p {
+.navbar-full-container .dd-div p {
   font-size: 0.83em;
   line-height: 1.3em;
   margin-top: 0.3em;
   font-weight: 400;
 }
 
-.dd-div a {
+.navbar-full-container .dd-div a {
   color: #232d46d8;
   font-weight: 600;
   font-size: 0.87em;
 }
 
-.dd-div svg.dd-arrow-right {
+.navbar-full-container .dd-div svg.dd-arrow-right {
   width: 0.65em;
   min-width: 0.65em;
   -webkit-transform: rotateZ(-90deg);
@@ -294,7 +303,7 @@ svg.dd-arrow {
   margin-left: 0.75em;
 }
 
-.dd-div .item-title {
+.navbar-full-container .dd-div .item-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,74 +312,74 @@ svg.dd-arrow {
           align-items: center;
 }
 
-.dd-div .item-title:hover a {
+.navbar-full-container .dd-div .item-title:hover a {
   color: #2dc8af;
 }
 
-.dd-div .item-title:hover svg {
+.navbar-full-container .dd-div .item-title:hover svg {
   -webkit-transition: 0.45s ease-out;
   transition: 0.45s ease-out;
   -webkit-transform: translateX(5px) rotateZ(-90deg);
           transform: translateX(5px) rotateZ(-90deg);
 }
 
-.dd-div .item-title:hover svg path {
+.navbar-full-container .dd-div .item-title:hover svg path {
   fill: #2dc8af;
 }
 
-.dd-div .item-title#column {
+.navbar-full-container .dd-div .item-title#column {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.dd-div .item-title#column a {
+.navbar-full-container .dd-div .item-title#column a {
   padding: 0.3em 0;
   font-size: 0.9em;
   line-height: 1.3em;
   font-weight: 500;
 }
 
-.dd-div .item-title#column-for-careers {
+.navbar-full-container .dd-div .item-title#column-for-careers {
   padding-bottom: 1em;
 }
 
-.dd-div .item-title#column-for-careers a {
+.navbar-full-container .dd-div .item-title#column-for-careers a {
   padding: 0.3em 0;
   font-weight: 500;
 }
 
-.dd-div .item-title#column-for-devs {
+.navbar-full-container .dd-div .item-title#column-for-devs {
   padding-bottom: 1em;
 }
 
-.dd-div .item-title#column-for-devs a {
+.navbar-full-container .dd-div .item-title#column-for-devs a {
   padding: 0.3em 0;
   font-weight: 500;
 }
 
-.dd-div .item-title#devs {
+.navbar-full-container .dd-div .item-title#devs {
   padding-bottom: 1em;
 }
 
-.dd-div .item-title#devs a {
+.navbar-full-container .dd-div .item-title#devs a {
   padding: 0.3em 0;
   font-weight: 500;
 }
 
-.dd-div#careers-dd-div {
+.navbar-full-container .dd-div#careers-dd-div {
   grid-row-gap: 0;
   grid-column-gap: 5em;
   padding-bottom: 1em;
 }
 
-.dd-div#devs-dd-div {
+.navbar-full-container .dd-div#devs-dd-div {
   grid-row-gap: 0;
   grid-column-gap: 5em;
   padding-bottom: 1em;
 }
 
-.dd-div#aboutus-dd-div {
+.navbar-full-container .dd-div#aboutus-dd-div {
   grid-row-gap: 0.1em;
   -ms-grid-columns: 25% 0.4fr 1fr;
       grid-template-columns: 25% 0.4fr 1fr;
@@ -378,31 +387,31 @@ svg.dd-arrow {
   padding-bottom: 2em;
 }
 
-.nvbar.transparent {
+.navbar-full-container .nvbar.transparent {
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.nvbar.transparent .menu-btn_burger,
-.nvbar.transparent .menu-btn_burger::before,
-.nvbar.transparent .menu-btn_burger::after {
+.navbar-full-container .nvbar.transparent .menu-btn_burger,
+.navbar-full-container .nvbar.transparent .menu-btn_burger::before,
+.navbar-full-container .nvbar.transparent .menu-btn_burger::after {
   background-color: #ffffff;
 }
 
-.nvbar.transparent a {
+.navbar-full-container .nvbar.transparent a {
   color: white;
 }
 
-.nvbar.transparent svg {
+.navbar-full-container .nvbar.transparent svg {
   opacity: 1;
 }
 
-.nvbar.transparent svg path {
+.navbar-full-container .nvbar.transparent svg path {
   fill: white;
 }
 
-.nvbar.move-up {
+.navbar-full-container .nvbar.move-up {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   -webkit-transition: -webkit-transform 0.6s ease-in 100ms;
@@ -411,7 +420,7 @@ svg.dd-arrow {
   transition: transform 0.6s ease-in 100ms, -webkit-transform 0.6s ease-in 100ms;
 }
 
-.menu-btn {
+.navbar-full-container .menu-btn {
   display: none;
   position: relative;
   -webkit-box-pack: center;
@@ -427,7 +436,7 @@ svg.dd-arrow {
   transition: all 0.5s ease-out;
 }
 
-.menu-btn_burger {
+.navbar-full-container .menu-btn_burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,8 +451,8 @@ svg.dd-arrow {
   transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
 }
 
-.menu-btn_burger::before,
-.menu-btn_burger::after {
+.navbar-full-container .menu-btn_burger::before,
+.navbar-full-container .menu-btn_burger::after {
   content: "";
   position: absolute;
   width: 1.5em;
@@ -456,21 +465,21 @@ svg.dd-arrow {
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.menu-btn_burger::before {
+.navbar-full-container .menu-btn_burger::before {
   -webkit-transform: translateY(-0.45em);
           transform: translateY(-0.45em);
 }
 
-.menu-btn_burger::after {
+.navbar-full-container .menu-btn_burger::after {
   -webkit-transform: translateY(0.45em);
           transform: translateY(0.45em);
 }
 
-.menu-btn.open .menu-btn_burger {
+.navbar-full-container .menu-btn.open .menu-btn_burger {
   background: transparent;
 }
 
-.menu-btn.open .menu-btn_burger::before {
+.navbar-full-container .menu-btn.open .menu-btn_burger::before {
   height: 0.13em;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -478,7 +487,7 @@ svg.dd-arrow {
           transform: rotate(-45deg);
 }
 
-.menu-btn.open .menu-btn_burger::after {
+.navbar-full-container .menu-btn.open .menu-btn_burger::after {
   height: 0.13em;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -487,16 +496,16 @@ svg.dd-arrow {
 }
 
 @media screen and (max-width: 1000px) {
-  .nvbar {
+  .navbar-full-container .nvbar {
     padding: 0 5%;
   }
-  .menu-btn {
+  .navbar-full-container .menu-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .nv-link-dditem,
-  .nv-link-item {
+  .navbar-full-container .nv-link-dditem,
+  .navbar-full-container .nv-link-item {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -512,42 +521,42 @@ svg.dd-arrow {
     border-bottom: none;
     border-top: none;
   }
-  .nv-link-dditem svg,
-  .nv-link-item svg {
+  .navbar-full-container .nv-link-dditem svg,
+  .navbar-full-container .nv-link-item svg {
     min-width: 7px;
   }
-  .nv-link-dditem:hover,
-  .nv-link-item:hover {
+  .navbar-full-container .nv-link-dditem:hover,
+  .navbar-full-container .nv-link-item:hover {
     border-left: 0.3em solid #2dc8af;
     border-bottom: none;
     background-color: #f7f7f757;
     -webkit-transition: all 0.2s ease-out, background-color 0s;
     transition: all 0.2s ease-out, background-color 0s;
   }
-  .nv-link-dditem:hover svg.dd-arrow,
-  .nv-link-item:hover svg.dd-arrow {
+  .navbar-full-container .nv-link-dditem:hover svg.dd-arrow,
+  .navbar-full-container .nv-link-item:hover svg.dd-arrow {
     -webkit-transform: translateX(0.5em) rotateZ(-90deg);
             transform: translateX(0.5em) rotateZ(-90deg);
     -webkit-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
   }
-  .nv-link-dditem:hover svg.dd-arrow path,
-  .nv-link-item:hover svg.dd-arrow path {
+  .navbar-full-container .nv-link-dditem:hover svg.dd-arrow path,
+  .navbar-full-container .nv-link-item:hover svg.dd-arrow path {
     fill: #2dc8af;
   }
-  .nv-link-dditem:hover > .dd-div {
+  .navbar-full-container .nv-link-dditem:hover > .dd-div {
     visibility: visible;
     opacity: 1;
     top: 0;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  .nv-links-wrapper.open {
+  .navbar-full-container .nv-links-wrapper.open {
     max-height: 999px;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
-  .nv-links-wrapper {
+  .navbar-full-container .nv-links-wrapper {
     overflow: hidden;
     max-height: 0;
     -webkit-box-shadow: inset 0 3px 5px -3px rgba(0, 0, 0, 0.15);
@@ -570,7 +579,7 @@ svg.dd-arrow {
     -ms-grid-rows: 10% 10% 10% 10% 10% auto;
         grid-template-rows: 10% 10% 10% 10% 10% auto;
   }
-  .nv-links-wrapper .item-title {
+  .navbar-full-container .nv-links-wrapper .item-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -578,14 +587,14 @@ svg.dd-arrow {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .nv-links-wrapper .nv-link-dditem#products {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#products {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: products;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .nv-link-dditem#products.default-open {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#products.default-open {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: products;
@@ -595,50 +604,50 @@ svg.dd-arrow {
     -webkit-transition: all 0.2s ease-out, background-color 0s;
     transition: all 0.2s ease-out, background-color 0s;
   }
-  .nv-links-wrapper .nv-link-dditem#products.default-open a.nv-link {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#products.default-open a.nv-link {
     color: #2dc8af;
   }
-  .nv-links-wrapper .nv-link-dditem#products.default-open svg.dd-arrow {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#products.default-open svg.dd-arrow {
     -webkit-transform: translateX(0.5em) rotateZ(-90deg);
             transform: translateX(0.5em) rotateZ(-90deg);
     -webkit-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
   }
-  .nv-links-wrapper .nv-link-dditem#products.default-open svg.dd-arrow path {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#products.default-open svg.dd-arrow path {
     fill: #2dc8af;
   }
-  .nv-links-wrapper .nv-link-dditem#solutions {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#solutions {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: solutions;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .nv-link-dditem#for-devs {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#for-devs {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: fordevs;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .nv-link-dditem#about-us {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#about-us {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: aboutus;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .nv-link-dditem#careers {
+  .navbar-full-container .nv-links-wrapper .nv-link-dditem#careers {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: careers;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .dd-div#products-dd-div.default-open {
+  .navbar-full-container .nv-links-wrapper .dd-div#products-dd-div.default-open {
     visibility: visible;
   }
-  .nv-links-wrapper .dd-div {
+  .navbar-full-container .nv-links-wrapper .dd-div {
     -webkit-box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.08);
             box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.08);
     display: inline-block;
@@ -653,50 +662,50 @@ svg.dd-arrow {
     grid-area: dd;
     background-color: #f7f7f757;
   }
-  .nv-links-wrapper .dd-div .dd-description {
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-description {
     padding-top: 0.5em;
     display: none;
   }
-  .nv-links-wrapper .dd-div .dd-item-1 {
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-item-1 {
     margin-top: 0em;
   }
-  .nv-links-wrapper .dd-div .dd-item-1,
-  .nv-links-wrapper .dd-div .dd-item-2,
-  .nv-links-wrapper .dd-div .dd-item-3,
-  .nv-links-wrapper .dd-div .dd-item-4 {
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-item-1,
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-item-2,
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-item-3,
+  .navbar-full-container .nv-links-wrapper .dd-div .dd-item-4 {
     padding-top: 1em;
   }
-  .nv-links-wrapper .item-card {
+  .navbar-full-container .nv-links-wrapper .item-card {
     width: 80%;
   }
-  .nv-links-wrapper .item-card .item-title {
+  .navbar-full-container .nv-links-wrapper .item-card .item-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     min-width: 80%;
   }
-  .nv-links-wrapper .item-title#column {
+  .navbar-full-container .nv-links-wrapper .item-title#column {
     min-width: 70%;
     margin-bottom: 0.5em;
   }
-  .nv-links-wrapper .item-title#column-for-careers {
+  .navbar-full-container .nv-links-wrapper .item-title#column-for-careers {
     min-width: 70%;
     margin-bottom: 1em;
   }
-  .nv-links-wrapper .item-title#column-for-devs {
+  .navbar-full-container .nv-links-wrapper .item-title#column-for-devs {
     min-width: 70%;
     margin-bottom: 1em;
   }
-  .nv-links-wrapper a.nv-link {
+  .navbar-full-container .nv-links-wrapper a.nv-link {
     font-size: 0.8em;
     color: #232d46;
   }
-  .nv-links-wrapper svg.dd-arrow {
+  .navbar-full-container .nv-links-wrapper svg.dd-arrow {
     -webkit-transform: rotateZ(-90deg);
             transform: rotateZ(-90deg);
   }
-  .nv-links-wrapper svg.dd-arrow path {
+  .navbar-full-container .nv-links-wrapper svg.dd-arrow path {
     fill: #232d46;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=nvbarstyle.css.map */
