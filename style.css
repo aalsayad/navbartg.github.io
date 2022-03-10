@@ -194,6 +194,7 @@ svg.dd-arrow {
 .dd-div .dd-item-2#column,
 .dd-div .dd-item-3#column,
 .dd-div .dd-item-4#column,
+.dd-div .dd-item-1#column-for-devs,
 .dd-div .dd-item-1#column-for-careers {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -205,6 +206,7 @@ svg.dd-arrow {
 .dd-div .dd-item-2#column h3,
 .dd-div .dd-item-3#column h3,
 .dd-div .dd-item-4#column h3,
+.dd-div .dd-item-1#column-for-devs h3,
 .dd-div .dd-item-1#column-for-careers h3 {
   margin-bottom: 1em;
 }
@@ -338,7 +340,31 @@ svg.dd-arrow {
   font-weight: 500;
 }
 
+.dd-div .item-title#column-for-devs {
+  padding-bottom: 1em;
+}
+
+.dd-div .item-title#column-for-devs a {
+  padding: 0.3em 0;
+  font-weight: 500;
+}
+
+.dd-div .item-title#devs {
+  padding-bottom: 1em;
+}
+
+.dd-div .item-title#devs a {
+  padding: 0.3em 0;
+  font-weight: 500;
+}
+
 .dd-div#careers-dd-div {
+  grid-row-gap: 0;
+  grid-column-gap: 5em;
+  padding-bottom: 1em;
+}
+
+.dd-div#devs-dd-div {
   grid-row-gap: 0;
   grid-column-gap: 5em;
   padding-bottom: 1em;
@@ -536,7 +562,7 @@ svg.dd-arrow {
     background-color: white;
     padding: 0;
     margin: 0;
-        grid-template-areas: "products dd" "solutions dd" "aboutus dd" "careers dd" "fordevs dd" ". dd";
+        grid-template-areas: "products dd" "solutions dd" "fordevs dd" "aboutus dd" "careers dd" ". dd";
     -ms-grid-columns: 30% 1fr;
         grid-template-columns: 30% 1fr;
     grid-row-gap: 0.2em;
@@ -588,22 +614,22 @@ svg.dd-arrow {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-  .nv-links-wrapper .nv-link-item#for-devs {
-    -ms-grid-row: 5;
+  .nv-links-wrapper .nv-link-dditem#for-devs {
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: fordevs;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
   .nv-links-wrapper .nv-link-dditem#about-us {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: aboutus;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
   .nv-links-wrapper .nv-link-dditem#careers {
-    -ms-grid-row: 4;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: careers;
     padding-top: 0.5em;
@@ -654,6 +680,10 @@ svg.dd-arrow {
     margin-bottom: 0.5em;
   }
   .nv-links-wrapper .item-title#column-for-careers {
+    min-width: 70%;
+    margin-bottom: 1em;
+  }
+  .nv-links-wrapper .item-title#column-for-devs {
     min-width: 70%;
     margin-bottom: 1em;
   }

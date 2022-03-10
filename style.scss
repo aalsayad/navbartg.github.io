@@ -161,6 +161,7 @@ svg.dd-arrow {
   .dd-item-2#column,
   .dd-item-3#column,
   .dd-item-4#column,
+  .dd-item-1#column-for-devs,
   .dd-item-1#column-for-careers {
     flex-direction: column;
 
@@ -281,6 +282,25 @@ svg.dd-arrow {
       font-weight: 500;
     }
   }
+
+    .item-title#column-for-devs {
+      padding-bottom: 1em;
+
+      a {
+        padding: 0.3em 0;
+        font-weight: 500;
+      }
+    }
+
+  .item-title#devs {
+    padding-bottom: 1em;
+
+    a {
+      padding: 0.3em 0;
+      font-weight: 500;
+    }
+  }
+  
 }
 
 .dd-div#careers-dd-div {
@@ -288,6 +308,13 @@ svg.dd-arrow {
   grid-column-gap: 5em;
   padding-bottom: 1em;
 }
+
+.dd-div#devs-dd-div {
+  grid-row-gap: 0;
+  grid-column-gap: 5em;
+  padding-bottom: 1em;
+}
+
 
 .dd-div#aboutus-dd-div {
   grid-row-gap: 0.1em;
@@ -453,9 +480,9 @@ svg.dd-arrow {
     grid-template-areas:
       "products dd"
       "solutions dd"
+      "fordevs dd"
       "aboutus dd"
       "careers dd"
-      "fordevs dd"
       ". dd";
     grid-template-columns: 30% 1fr;
     grid-row-gap: 0.2em;
@@ -503,7 +530,7 @@ svg.dd-arrow {
       padding-bottom: 0.5em;
     }
 
-    .nv-link-item#for-devs {
+    .nv-link-dditem#for-devs {
       //background-color: rgba(0, 174, 255, 0.075);
       grid-area: fordevs;
       padding-top: 0.5em;
@@ -573,6 +600,12 @@ svg.dd-arrow {
     }
 
     .item-title#column-for-careers {
+      min-width: 70%;
+      margin-bottom: 1em;
+      //background-color: red;
+    }
+
+    .item-title#column-for-devs {
       min-width: 70%;
       margin-bottom: 1em;
       //background-color: red;
