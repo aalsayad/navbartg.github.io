@@ -1,7 +1,7 @@
 //Is my script.js working?
 console.log("Script.js is now linked & running!");
 
-const nvbar = document.querySelector(".nvbar");
+const nvbara = document.querySelector(".nvbar");
 const nvbarLinksWrapper = document.querySelector(".nv-links-wrapper");
 const body = document.querySelector("body");
 
@@ -9,12 +9,12 @@ const body = document.querySelector("body");
 
 nvbarLinksWrapper.addEventListener("mouseenter", () => {
   if (AmIatTop == "True" && !mobileView) {
-    nvbar.classList.remove("transparent");
+    nvbara.classList.remove("transparent");
   }
 });
 nvbarLinksWrapper.addEventListener("mouseleave", () => {
   if (AmIatTop == "True" && !mobileView) {
-    nvbar.classList.add("transparent");
+    nvbara.classList.add("transparent");
   }
 });
 
@@ -47,7 +47,7 @@ let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
-    nvbar.classList.remove("transparent");
+    nvbara.classList.remove("transparent");
     productsNvLink.classList.add("default-open"); //Activate Products DD Link Wrapper Hover Effect
     productsDdDiv.classList.add("default-open"); //Activate Products DD Div Hovered Effect
     menuBtn.classList.add("open");
@@ -60,7 +60,7 @@ menuBtn.addEventListener("click", () => {
     body.style.overflow = "unset"; //adding back the scrollbar if the menu is closed
     menuOpen = false;
     if (AmIatTop == "True") {
-      nvbar.classList.add("transparent");
+      nvbara.classList.add("transparent");
     }
   }
 });
@@ -74,11 +74,11 @@ function NvScrollingAction() {
   window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY && AmIatTop == "False") {
       //console.log('Scrolling down')
-      nvbar.classList.remove("transparent");
-      nvbar.classList.add("move-up");
+      nvbara.classList.remove("transparent");
+      nvbara.classList.add("move-up");
     } else {
       //console.log('Scrolling up')
-      nvbar.classList.remove("move-up");
+      nvbara.classList.remove("move-up");
     }
     lastScrollY = window.scrollY;
   });
@@ -89,7 +89,7 @@ NvScrollingAction();
 //This function works only on mobile because i have another function that makes the AmIatTop div height to 0
 function changeNvToTransparent() {
   if (AmIatTop == "True") {
-    nvbar.classList.add("transparent");
+    nvbara.classList.add("transparent");
   }
 }
 window.addEventListener("scroll", changeNvToTransparent);
@@ -102,7 +102,7 @@ function checkMobileView() {
   if (document.body.offsetWidth < 1000) {
     mobileView = true;
     console.log("We are now in mobile view");
-    nvbar.classList.remove("transparent");
+    nvbara.classList.remove("transparent");
     //ToggleWhiteNav.style.height = "0px"; //Changing Observer Div to stop working when we are in mobile view
     //ToggleWhiteNav.style.transform = "translateY(-100px)";
   } else {
